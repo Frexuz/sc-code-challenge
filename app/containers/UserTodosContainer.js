@@ -48,6 +48,7 @@ class UserTodosContainer extends Component {
         <EmptyState type='userTodos' />
       )
     }
+    
     return (
       <RefreshableScrollView fetchData={this.fetchData}>
         <UserTodoList todos={todos} user={user} onPress={this.toggleTodoCompletion} />

@@ -28,6 +28,7 @@ class UserPostsContainer extends Component {
         <EmptyState type='userPosts' />
       )
     }
+    
     return (
       <RefreshableScrollView fetchData={this.fetchData}>
         <UserPostList posts={posts} user={user} />

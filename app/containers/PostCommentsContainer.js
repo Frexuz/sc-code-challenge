@@ -37,6 +37,7 @@ class PostCommentsContainer extends Component {
         <EmptyState type='postComments' />
       )
     }
+    
     return (
       <RefreshableScrollView fetchData={this.fetchData}>
         <PostCommentList comments={comments} post={post} />

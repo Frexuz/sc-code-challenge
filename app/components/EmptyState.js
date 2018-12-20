@@ -10,20 +10,28 @@ const t = scopedI18n('emptyStates')
 
 const emptyStates = {
   users: {
-    icon: 'account-multiple',
+    icon: 'close-circle-outline',
     text: '.users.text',
   },
   userPosts: {
-    icon: 'text-subject',
+    icon: 'close-circle-outline',
     text: '.userPosts.text',
   },
   postComments: {
-    icon: 'comment-multiple-outline',
+    icon: 'close-circle-outline',
     text: '.postComments.text'
   },
   userTodos: {
-    icon: 'comment-multiple-outline',
+    icon: 'close-circle-outline',
     text: '.userTodos.text'
+  },
+  userAlbums: {
+    icon: 'close-circle-outline',
+    text: '.userAlbums.text'
+  },
+  userAlbum: {
+    icon: 'close-circle-outline',
+    text: '.userAlbum.text'
   },
 }
 

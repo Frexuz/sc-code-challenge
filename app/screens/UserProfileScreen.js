@@ -51,7 +51,7 @@ class UserProfileScreen extends Component {
           <List containerStyle={{ marginTop: 20 }}>
             <ListItem textStyle={{ fontWeight: 'bold' }} icon='text-subject' text='View posts' onPress={() => Navigate.to('UserPosts', { user: user })} />
             <ListItem textStyle={{ fontWeight: 'bold' }} icon='checkbox-marked-outline' text='View todo&apos;s' onPress={() => Navigate.to('UserTodos', { user: user })} />
-            <ListItem textStyle={{ fontWeight: 'bold' }} icon='image-filter' text='View albums' onPress={() => {}} />
+            <ListItem textStyle={{ fontWeight: 'bold' }} icon='image-filter' text='View albums' onPress={() => Navigate.to('UserAlbums', { user: user })} />
           </List>
         </Content>
       </ScrollView>

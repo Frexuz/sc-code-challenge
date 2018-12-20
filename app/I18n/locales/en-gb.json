@@ -8,6 +8,8 @@
     "userPosts": "User posts",
     "postComments": "Comments",
     "userTodos": "Todo's",
+    "userAlbums": "Albums",
+    "userAlbum": "Photos",
   },
   "emptyStates": {
     "users": {
@@ -21,6 +23,12 @@
     },
     "userTodos": {
       "text": "No todo items were found for this user.",
+    },
+    "userAlbums": {
+      "text": "No albums were found for this user.",
+    },
+    "userAlbum": {
+      "text": "No photos were found in this album.",
     },
   }
 }

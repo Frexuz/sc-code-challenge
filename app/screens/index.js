@@ -11,6 +11,8 @@ import UserProfileScreen from './UserProfileScreen'
 import UserPostsScreen from './UserPostsScreen'
 import PostCommentsScreen from './PostCommentsScreen'
 import UserTodosScreen from './UserTodosScreen'
+import UserAlbumsScreen from './UserAlbumsScreen'
+import UserAlbumScreen from './UserAlbumScreen'
 
 const mapStateToProps = (state) => ({
   appLanguage: state.language.appLanguage
@@ -73,6 +75,16 @@ class AppRouter extends Component {
                       key='UserTodos'
                       renderTitle={() => <ScreenTitle t='titles.userTodos' />}
                       component={connect(mapStateToProps)(UserTodosScreen)}
+                    />
+                    <Scene
+                      key='UserAlbums'
+                      renderTitle={() => <ScreenTitle t='titles.userAlbums' />}
+                      component={connect(mapStateToProps)(UserAlbumsScreen)}
+                    />
+                    <Scene
+                      key='UserAlbum'
+                      renderTitle={() => <ScreenTitle t='titles.userAlbum' />}
+                      component={connect(mapStateToProps)(UserAlbumScreen)}
                     />
                   </Stack>
                 </Tabs>
