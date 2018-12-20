@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { View, Text, ScrollView } from 'react-native'
-import _ from 'lodash'
 
 import { Card, Title, Content, Avatar, Link, List, ListItem } from '@components'
 import { Navigate } from '@screens'

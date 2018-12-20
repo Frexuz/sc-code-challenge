@@ -6,6 +6,7 @@
     "users": "Users",
     "userProfile": "User profile",
     "userPosts": "User posts",
+    "postComments": "Comments",
   },
   "emptyStates": {
     "users": {
@@ -13,6 +14,9 @@
     },
     "userPosts": {
       "text": "No posts by this user were found.",
-    }
+    },
+    "postComments": {
+      "text": "No comments were found for this post.",
+    },
   }
 }

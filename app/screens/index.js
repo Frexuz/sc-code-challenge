@@ -9,6 +9,7 @@ import { TabIcon, ScreenTitle } from '@components'
 import UsersScreen from './UsersScreen'
 import UserProfileScreen from './UserProfileScreen'
 import UserPostsScreen from './UserPostsScreen'
+import PostCommentsScreen from './PostCommentsScreen'
 
 const mapStateToProps = (state) => ({
   appLanguage: state.language.appLanguage
@@ -61,6 +62,11 @@ class AppRouter extends Component {
                       key='UserPosts'
                       renderTitle={() => <ScreenTitle t='titles.userPosts' />}
                       component={connect(mapStateToProps)(UserPostsScreen)}
+                    />
+                    <Scene
+                      key='PostComments'
+                      renderTitle={() => <ScreenTitle t='titles.postComments' />}
+                      component={connect(mapStateToProps)(PostCommentsScreen)}
                     />
                   </Stack>
                 </Tabs>

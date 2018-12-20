@@ -10,7 +10,6 @@ class UserPostsContainer extends Component {
   }
 
   fetchData = async() => {
-    console.log(this.props.user.id)
     this.props.dispatch(getUserPosts(this.props.user.id))
   }
 

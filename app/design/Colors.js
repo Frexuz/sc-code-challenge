@@ -55,6 +55,7 @@ const Colors = {
   text: {
     base: palette.greys.base,
     light: palette.greys.light,
+    dark: palette.greys.dark,
     title: palette.blues.dark
   },
   tint: palette.tints,

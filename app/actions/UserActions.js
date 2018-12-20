@@ -30,7 +30,6 @@ export function getUsers() {
 
     return API.get('users')
       .then(function (response) {
-        console.log({ response })
         dispatch(receiveUsers(response.data))
       })
       .catch(function (error) {

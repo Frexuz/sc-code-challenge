@@ -19,7 +19,7 @@ class UserCard extends PureComponent {
                   <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{user.username}</Text>
                   <Text style={{ marginBottom: 10 }}>{user.name}</Text>
                   <Row alignCenter>
-                    <Icon name='briefcase' size={16} color={Colors.grey.dark} />
+                    <Icon name='briefcase' size={16} color={Colors.grey.light} />
                     <Text style={{ marginLeft: 5, color: Colors.grey.base }}>{user.company.name}</Text>
                   </Row>
                 </View>
