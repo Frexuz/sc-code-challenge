@@ -10,6 +10,7 @@ import UsersScreen from './UsersScreen'
 import UserProfileScreen from './UserProfileScreen'
 import UserPostsScreen from './UserPostsScreen'
 import PostCommentsScreen from './PostCommentsScreen'
+import UserTodosScreen from './UserTodosScreen'
 
 const mapStateToProps = (state) => ({
   appLanguage: state.language.appLanguage
@@ -67,6 +68,11 @@ class AppRouter extends Component {
                       key='PostComments'
                       renderTitle={() => <ScreenTitle t='titles.postComments' />}
                       component={connect(mapStateToProps)(PostCommentsScreen)}
+                    />
+                    <Scene
+                      key='UserTodos'
+                      renderTitle={() => <ScreenTitle t='titles.userTodos' />}
+                      component={connect(mapStateToProps)(UserTodosScreen)}
                     />
                   </Stack>
                 </Tabs>

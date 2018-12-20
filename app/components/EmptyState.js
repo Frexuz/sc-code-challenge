@@ -21,6 +21,10 @@ const emptyStates = {
     icon: 'comment-multiple-outline',
     text: '.postComments.text'
   },
+  userTodos: {
+    icon: 'comment-multiple-outline',
+    text: '.userTodos.text'
+  },
 }
 
 class EmptyState extends Component {

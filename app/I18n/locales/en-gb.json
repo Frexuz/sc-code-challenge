@@ -7,6 +7,7 @@
     "userProfile": "User profile",
     "userPosts": "User posts",
     "postComments": "Comments",
+    "userTodos": "Todos",
   },
   "emptyStates": {
     "users": {
@@ -17,6 +18,9 @@
     },
     "postComments": {
       "text": "No comments were found for this post.",
+    },
+    "userTodos": {
+      "text": "No todo items were found for this user.",
     },
   }
 }

@@ -50,7 +50,7 @@ class UserProfileScreen extends Component {
           </Card>
           <List containerStyle={{ marginTop: 20 }}>
             <ListItem textStyle={{ fontWeight: 'bold' }} icon='text-subject' text='View posts' onPress={() => Navigate.to('UserPosts', { user: user })} />
-            <ListItem textStyle={{ fontWeight: 'bold' }} icon='checkbox-marked-outline' text='View todo&apos;s' onPress={() => {}} />
+            <ListItem textStyle={{ fontWeight: 'bold' }} icon='checkbox-marked-outline' text='View todo&apos;s' onPress={() => Navigate.to('UserTodos', { user: user })} />
             <ListItem textStyle={{ fontWeight: 'bold' }} icon='image-filter' text='View albums' onPress={() => {}} />
           </List>
         </Content>
