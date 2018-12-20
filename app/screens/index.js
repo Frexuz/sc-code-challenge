@@ -6,7 +6,7 @@ import { Colors } from '@design'
 import { TabIcon, ScreenTitle } from '@components'
 
 // Screens
-import HomeScreen from './HomeScreen'
+import UsersScreen from './UsersScreen'
 
 const mapStateToProps = (state) => ({
   appLanguage: state.language.appLanguage
@@ -42,15 +42,15 @@ class AppRouter extends Component {
                   lazy
                 >
                   <Stack
-                    key='homeStack'
-                    title='tabs.home'
+                    key='usersStack'
+                    title='tabs.users'
                     icon={TabIcon}
-                    iconType='Home'
+                    iconType='Users'
                   >
                     <Scene
-                      key='Home'
-                      renderTitle={() => <ScreenTitle t='titles.home' />}
-                      component={connect(mapStateToProps)(HomeScreen)}
+                      key='usersScene'
+                      renderTitle={() => <ScreenTitle t='titles.users' />}
+                      component={connect(mapStateToProps)(UsersScreen)}
                     />
                   </Stack>
                 </Tabs>

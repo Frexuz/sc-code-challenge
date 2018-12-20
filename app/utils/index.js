@@ -10,3 +10,21 @@ export function scopedI18n (scope) {
     }
   }
 }
+
+export function arrayToIdHash (array, key) {
+  let hash = {}
+  array.forEach(s => (hash[_.get(s, key)] = s))
+  return hash
+}
+
+export function hashToFlatArray (hash) {
+  return Object.keys(hash).map(k => hash[k])
+}
+
+export function toIdHash (payload, state) {
+  let hash = { ...state }
+  payload.forEach(item => {
+    hash = _.assign(hash, { [item.id]: item })
+  })
+  return hash
+}

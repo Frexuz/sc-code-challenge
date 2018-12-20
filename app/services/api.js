@@ -11,8 +11,9 @@
 import axios from 'axios'
 import _ from 'lodash'
 
+const API_ENDPOINT = 'https://jsonplaceholder.typicode.com/'
+
 function requestHeaders (customHeaders) {
-  // Hard coding country code
   const defaultHeaders = {
     'Accept': 'application/json'
   }
@@ -20,12 +21,8 @@ function requestHeaders (customHeaders) {
   return _.assign(defaultHeaders, customHeaders)
 }
 
-function url () {
-  return Config.API_ENDPOINT
-}
-
 function destination (path) {
-  return url() + path
+  return API_ENDPOINT + path
 }
 
 function get (path, hash = {}) {

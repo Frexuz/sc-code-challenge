@@ -3,9 +3,14 @@
     "loading": "Loading...",
   },
   "tabs": {
-    "home": "Home",
+    "users": "Users",
   },
   "titles": {
-    "home": "Home",
+    "users": "Users",
+  },
+  "emptyStates": {
+    "users": {
+      "text": "No users found.",
+    }
   }
 }
