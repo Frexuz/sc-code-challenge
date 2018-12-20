@@ -6,16 +6,16 @@ import { Card, Icon, Row, FlexView, Avatar } from '@components'
 
 class UserCard extends PureComponent {
   render = () => {
-    const { user } = this.props
+    const { user, onPress } = this.props
 
     return (
-      <TouchableOpacity>
-        <Card containerStyle={{ margin: 10 }}>
+      <TouchableOpacity onPress={onPress}>
+        <Card containerStyle={{ margin: 10, padding: 20 }}>
           <Row alignCenter>
             <FlexView>
               <Row>
                 <Avatar user={user} size={40} />
-                <View style={{ marginLeft: 10 }}>
+                <View style={{ marginLeft: 20 }}>
                   <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{user.username}</Text>
                   <Text style={{ marginBottom: 10 }}>{user.name}</Text>
                   <Row alignCenter>

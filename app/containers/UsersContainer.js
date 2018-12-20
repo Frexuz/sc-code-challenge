@@ -19,7 +19,7 @@ class UsersContainer extends Component {
 
     if (isFetching) {
       return (
-        <ContentPlaceholder style={{ marginHorizontal: 20, marginVertical: 20 }} />
+        <ContentPlaceholder style={{ margin: 20 }} />
       )
     }
 

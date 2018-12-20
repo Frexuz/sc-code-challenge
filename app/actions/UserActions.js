@@ -24,16 +24,17 @@ function failedReceiveUsers(payload) {
   }
 }
 
-export function getUsers () {
+export function getUsers() {
   return function (dispatch) {
     dispatch(requestUsers())
+
     return API.get('users')
-    .then(function (response) {
-      console.log({ response })
-      dispatch(receiveUsers(response.data))
-    })
-    .catch(function (error) {
-      dispatch(failedReceiveUsers(error))
-    })
+      .then(function (response) {
+        console.log({ response })
+        dispatch(receiveUsers(response.data))
+      })
+      .catch(function (error) {
+        dispatch(failedReceiveUsers(error))
+      })
   }
 }

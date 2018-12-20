@@ -8,7 +8,7 @@ const initialState = {
   isFetching: false,
 }
 
-function localReducer (state = initialState, action) {
+function userReducer (state = initialState, action) {
   switch (action.type) {
     case REQUEST_USERS:
       return {
@@ -34,4 +34,4 @@ function localReducer (state = initialState, action) {
   }
 }
 
-export default localReducer
+export default userReducer
