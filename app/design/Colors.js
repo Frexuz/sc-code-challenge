@@ -1,8 +1,4 @@
 const palette = {
-  reds: {
-    base: '#ff4b55',
-    light: '#f55'
-  },
   blues: {
     dark: '#072046',
     base: '#4173cd'
@@ -17,9 +13,6 @@ const palette = {
     lighter: '#eee',
     lightest: '#f6f6f6',
     white: '#fff'
-  },
-  yellows: {
-    base: '#ff0'
   },
   greens: {
     base: '#41ad49',
@@ -44,13 +37,9 @@ const Colors = {
   secondary: palette.blues.base,
   white: palette.greys.white,
   black: palette.greys.black,
-  danger: palette.reds.base,
-  warn: palette.yellows.base,
   success: palette.greens.base,
-  red: palette.reds,
   blue: palette.blues,
   grey: palette.greys,
-  yellow: palette.yellows,
   green: palette.greens,
   text: {
     base: palette.greys.base,
