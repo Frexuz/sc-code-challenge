@@ -15,21 +15,21 @@ const LinkInnerContainer = styled.View`
 `
 
 const LinkText = styled.Text`
-  color: ${props => props.color ? props.color : (props.secondary ? Colors.grey.light : Colors.link)};
+  color: ${props => props.color ? props.color : Colors.link};
 `
 
 class Link extends Component {
   render () {
-    const { onPress, text, style, secondary, disabled, children, color } = this.props
+    const { onPress, text, style, disabled, children, color } = this.props
 
     // TouchableHighlight only allows 1 child
     // Nested `Icon` in a `Text` could not be positioned with `margin`, so each needs its own `LinkText`
     return (
       <LinkContainer onPress={disabled ? null : onPress} style={style}>
         <LinkInnerContainer>
-          {this.props.leftArrow && <LinkText style={{ marginTop: 3, marginRight: -2, marginLeft: -5 }} color={color} secondary={secondary}><Icon name='chevron-left' size={20} /></LinkText>}
-          {children || <LinkText color={color} secondary={secondary}>{text}</LinkText>}
-          {this.props.rightArrow && <LinkText style={{ marginTop: 3, marginLeft: -2, marginRight: -5 }} color={color} secondary={secondary}><Icon name='chevron-right' size={20} /></LinkText>}
+          {this.props.leftArrow && <LinkText style={{ marginTop: 3, marginRight: -2, marginLeft: -5 }} color={color}><Icon name='chevron-left' size={20} /></LinkText>}
+          {children || <LinkText color={color}>{text}</LinkText>}
+          {this.props.rightArrow && <LinkText style={{ marginTop: 3, marginLeft: -2, marginRight: -5 }} color={color}><Icon name='chevron-right' size={20} /></LinkText>}
         </LinkInnerContainer>
       </LinkContainer>
     )

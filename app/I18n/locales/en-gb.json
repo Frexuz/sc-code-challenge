@@ -1,17 +1,18 @@
 {
-  "common": {
-    "loading": "Loading...",
-  },
   "tabs": {
     "users": "Users",
   },
   "titles": {
     "users": "Users",
     "userProfile": "User profile",
+    "userPosts": "User posts",
   },
   "emptyStates": {
     "users": {
-      "text": "No users found.",
+      "text": "No users were found.",
+    },
+    "userPosts": {
+      "text": "No posts by this user were found.",
     }
   }
 }

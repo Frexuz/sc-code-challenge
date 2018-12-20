@@ -5,9 +5,6 @@
 
 import React, { Component } from 'react'
 import { ScrollView, RefreshControl } from 'react-native'
-// import EventEmitter from 'events'
-
-// EventEmitter.prototype._maxListeners = 100
 
 class RefreshableScrollView extends Component {
   constructor (props) {
@@ -20,11 +17,13 @@ class RefreshableScrollView extends Component {
 
   onRefresh = () => {
     this.setState({ refreshing: true })
-    this.props.fetchData().then(() => {
-      this.setState({ refreshing: false })
-    }).catch(() => {
-      this.setState({ refreshing: false })
-    })
+
+    this.props.fetchData()
+      .then(() => {
+        this.setState({ refreshing: false })
+      }).catch(() => {
+        this.setState({ refreshing: false })
+      })
   }
 
   render () {

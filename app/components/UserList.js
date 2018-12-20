@@ -1,20 +1,23 @@
 import React, { Component } from 'react'
+import { FlatList, View } from 'react-native'
 import { Navigate } from '@screens'
 
-import { List, UserCard } from '@components'
+import { UserCard } from '@components'
 
 class UserList extends Component {
   onPress = (user) => {
     Navigate.to('UserProfile', { user: user })
   }
 
+  renderItem = ({ item }) => {
+    return <UserCard user={item} onPress={() => this.onPress(item)} />
+  }
+
   render () {
     const { users } = this.props
 
     return (
-      <List containerStyle={{ padding: 10 }}>
-        {users.map(user => <UserCard user={user} onPress={() => this.onPress(user)} />)}
-      </List>
+      <FlatList data={users} renderItem={this.renderItem} style={{ padding: 10 }} />
     )
   }
 }

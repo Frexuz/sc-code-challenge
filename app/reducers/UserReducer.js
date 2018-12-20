@@ -4,7 +4,7 @@ import { RECEIVE_USERS, REQUEST_USERS, FAILED_RECEIVE_USERS } from '@actions/Use
 import { toIdHash } from '@utils'
 
 const initialState = {
-  byId: [],
+  byId: {},
   isFetching: false,
 }
 

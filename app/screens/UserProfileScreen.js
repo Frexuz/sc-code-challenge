@@ -3,6 +3,7 @@ import { View, Text, ScrollView } from 'react-native'
 import _ from 'lodash'
 
 import { Card, Title, Content, Avatar, Link, List, ListItem } from '@components'
+import { Navigate } from '@screens'
 import { scopedI18n } from '@utils'
 
 const t = scopedI18n('screens.home')
@@ -49,7 +50,7 @@ class UserProfileScreen extends Component {
             </List>
           </Card>
           <List containerStyle={{ marginTop: 20 }}>
-            <ListItem textStyle={{ fontWeight: 'bold' }} icon='text-subject' text='View posts' onPress={() => {}} />
+            <ListItem textStyle={{ fontWeight: 'bold' }} icon='text-subject' text='View posts' onPress={() => Navigate.to('UserPosts', { user: user })} />
             <ListItem textStyle={{ fontWeight: 'bold' }} icon='checkbox-marked-outline' text='View todo&apos;s' onPress={() => {}} />
             <ListItem textStyle={{ fontWeight: 'bold' }} icon='image-filter' text='View albums' onPress={() => {}} />
           </List>

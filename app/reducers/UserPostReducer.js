@@ -3,7 +3,7 @@ import _ from 'lodash'
 import { RECEIVE_USER_POSTS, REQUEST_USER_POSTS, FAILED_RECEIVE_USER_POSTS } from '@actions/UserPostActions'
 
 const initialState = {
-  byUserId: [],
+  byUserId: {},
   isFetching: false,
 }
 

@@ -13,6 +13,10 @@ const emptyStates = {
     icon: 'account-multiple',
     text: '.users.text',
   },
+  userPosts: {
+    icon: 'text-subject',
+    text: '.userPosts.text',
+  },
 }
 
 class EmptyState extends Component {
