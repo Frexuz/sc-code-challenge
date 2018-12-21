@@ -1,6 +1,6 @@
 const languages = [
-  { key: 'en-gb', locale: 'en-GB', name: 'English' },
-  { key: 'zh-hk', locale: 'zh-HK', name: 'Traditional Chinese', localName: '繁體中文' }
+  { cca2: 'gb', key: 'en-gb', locale: 'en-GB', name: 'English' },
+  { cca2: 'hk', key: 'zh-hk', locale: 'zh-HK', name: 'Traditional Chinese', localName: '繁體中文' }
 ]
 
 export const DEFAULT_LANGUAGE = languages[0]

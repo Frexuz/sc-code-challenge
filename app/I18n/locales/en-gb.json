@@ -1,6 +1,7 @@
 {
   "tabs": {
     "users": "Users",
+    "settings": "Settings",
   },
   "titles": {
     "users": "Users",
@@ -10,6 +11,28 @@
     "userTodos": "Todo's",
     "userAlbums": "Albums",
     "userAlbum": "Photos",
+    "settings": "Settings",
+  },
+  "components": {
+    "userPost": {
+      "viewComments": "View comments",
+    },
+    "userPostList": {
+      "postsBy": "Posts by {{username}}",
+    },
+    "userTodoList": {
+      "incompleted": {
+        "title": "Items to complete",
+        "emptyText": "No items to complete",
+      },
+      "completed": {
+        "title": "Completed items",
+        "emptyText": "No completed items",
+      },
+    },
+    "postComment": {
+      "commentBy": "Comment by {{email}}",
+    },
   },
   "emptyStates": {
     "users": {
@@ -30,5 +53,16 @@
     "userAlbum": {
       "text": "No photos were found in this album.",
     },
-  }
+  },
+  "screens": {
+    "settings": {
+      "selectLanguage": "Select language"
+    },
+    "userProfile": {
+      "revealAddress": "Reveal address",
+      "viewPosts": "View posts",
+      "viewTodos": "View todo's",
+      "viewAlbums": "View albums",
+    },
+  },
 }

@@ -6,13 +6,10 @@ import { Colors } from '@design'
 import I18nText from './I18nText'
 import _ from 'lodash'
 
-const mapStateToProps = (state) => ({
-  appLanguage: state.language.appLanguage
-})
-
 const icon = (props, color) => {
   const iconMap = {
     'Users': <Icon name='account-multiple' size={24} color={color} />,
+    'Settings': <Icon name='settings' size={24} color={color} />,
   }
   return iconMap[props.iconType]
 }
@@ -50,6 +47,10 @@ const styles = StyleSheet.create({
     fontSize: 10,
     fontWeight: 'bold',
   }
+})
+
+const mapStateToProps = (state) => ({
+  languageKey: state.language.key
 })
 
 export default connect(mapStateToProps)(TabIcon)

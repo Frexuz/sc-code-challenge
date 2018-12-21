@@ -3,6 +3,9 @@ import { FlatList, Text, View } from 'react-native'
 
 import { Colors } from '@design'
 import { UserTodo, UserCard, Content } from '@components'
+import { scopedI18n } from '@utils'
+
+const t = scopedI18n('components.userTodoList')
 
 class UserTodoList extends Component {
   renderItem = ({ item }) => {
@@ -34,13 +37,13 @@ class UserTodoList extends Component {
         <Content containerStyle={{ padding: 10, paddingTop: 0 }}>
           {this.renderList({
             list: incompletedItems,
-            title: 'Items to complete',
-            emptyText: 'No items to compelte'
+            title: t('.incompleted.title'),
+            emptyText: t('.incompleted.emptyText')
           })}
           {this.renderList({
             list: completedItems,
-            title: 'Completed items',
-            emptyText: 'No completed items'
+            title: t('.completed.title'),
+            emptyText: t('.completed.emptyText')
           })}
         </Content>
       </View>

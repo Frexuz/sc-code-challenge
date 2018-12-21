@@ -1,6 +1,8 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
 
+import { Colors } from '@design'
+
 const Card = ({ containerStyle, children }) => (
   <View style={[styles.card, containerStyle]}>
     {children}
@@ -9,10 +11,10 @@ const Card = ({ containerStyle, children }) => (
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: Colors.white,
     padding: 10,
     elevation: 3,
-    shadowColor: '#000',
+    shadowColor: Colors.black,
     shadowOffset: {
       width: 0,
       height: 2

@@ -13,9 +13,10 @@ import PostCommentsScreen from './PostCommentsScreen'
 import UserTodosScreen from './UserTodosScreen'
 import UserAlbumsScreen from './UserAlbumsScreen'
 import UserAlbumScreen from './UserAlbumScreen'
+import SettingsScreen from './SettingsScreen'
 
 const mapStateToProps = (state) => ({
-  appLanguage: state.language.appLanguage
+  languageKey: state.language.key
 })
 
 class AppRouter extends Component {
@@ -32,66 +33,70 @@ class AppRouter extends Component {
         backButtonTintColor={Colors.link}
         sceneStyle={{ backgroundColor: Colors.grey.lightest }}
       >
-        <Overlay>
-          <Modal>
-            <Lightbox hideNavBar key='mainRouter'>
-              <Scene hideNavBar>
-                <Tabs
-                  key='tabBar'
-                  showLabel={false}
-                  swipeEnabled={false}
-                  animationEnabled={false}
-                  tabBarPosition='bottom'
-                  tabBarStyle={{ borderTopWidth: 1, borderTopColor: Colors.grey.lighter }}
-                  lazy
-                >
-                  <Stack
-                    key='usersStack'
-                    title='tabs.users'
-                    icon={TabIcon}
-                    iconType='Users'
-                  >
-                    <Scene
-                      key='Users'
-                      renderTitle={() => <ScreenTitle t='titles.users' />}
-                      component={connect(mapStateToProps)(UsersScreen)}
-                    />
-                    <Scene
-                      key='UserProfile'
-                      renderTitle={() => <ScreenTitle t='titles.userProfile' />}
-                      component={connect(mapStateToProps)(UserProfileScreen)}
-                    />
-                    <Scene
-                      key='UserPosts'
-                      renderTitle={() => <ScreenTitle t='titles.userPosts' />}
-                      component={connect(mapStateToProps)(UserPostsScreen)}
-                    />
-                    <Scene
-                      key='PostComments'
-                      renderTitle={() => <ScreenTitle t='titles.postComments' />}
-                      component={connect(mapStateToProps)(PostCommentsScreen)}
-                    />
-                    <Scene
-                      key='UserTodos'
-                      renderTitle={() => <ScreenTitle t='titles.userTodos' />}
-                      component={connect(mapStateToProps)(UserTodosScreen)}
-                    />
-                    <Scene
-                      key='UserAlbums'
-                      renderTitle={() => <ScreenTitle t='titles.userAlbums' />}
-                      component={connect(mapStateToProps)(UserAlbumsScreen)}
-                    />
-                    <Scene
-                      key='UserAlbum'
-                      renderTitle={() => <ScreenTitle t='titles.userAlbum' />}
-                      component={connect(mapStateToProps)(UserAlbumScreen)}
-                    />
-                  </Stack>
-                </Tabs>
-              </Scene>
-            </Lightbox>
-          </Modal>
-        </Overlay>
+        <Tabs
+          key='tabBar'
+          showLabel={false}
+          swipeEnabled={false}
+          animationEnabled={false}
+          tabBarPosition='bottom'
+          tabBarStyle={{ borderTopWidth: 1, borderTopColor: Colors.grey.lighter }}
+          lazy
+        >
+          <Stack
+            key='usersStack'
+            title='tabs.users'
+            icon={TabIcon}
+            iconType='Users'
+          >
+            <Scene
+              key='Users'
+              renderTitle={() => <ScreenTitle t='titles.users' />}
+              component={connect(mapStateToProps)(UsersScreen)}
+            />
+            <Scene
+              key='UserProfile'
+              renderTitle={() => <ScreenTitle t='titles.userProfile' />}
+              component={connect(mapStateToProps)(UserProfileScreen)}
+            />
+            <Scene
+              key='UserPosts'
+              renderTitle={() => <ScreenTitle t='titles.userPosts' />}
+              component={connect(mapStateToProps)(UserPostsScreen)}
+            />
+            <Scene
+              key='PostComments'
+              renderTitle={() => <ScreenTitle t='titles.postComments' />}
+              component={connect(mapStateToProps)(PostCommentsScreen)}
+            />
+            <Scene
+              key='UserTodos'
+              renderTitle={() => <ScreenTitle t='titles.userTodos' />}
+              component={connect(mapStateToProps)(UserTodosScreen)}
+            />
+            <Scene
+              key='UserAlbums'
+              renderTitle={() => <ScreenTitle t='titles.userAlbums' />}
+              component={connect(mapStateToProps)(UserAlbumsScreen)}
+            />
+            <Scene
+              key='UserAlbum'
+              renderTitle={() => <ScreenTitle t='titles.userAlbum' />}
+              component={connect(mapStateToProps)(UserAlbumScreen)}
+            />
+          </Stack>
+          <Stack
+            key='settingsStack'
+            title='tabs.settings'
+            icon={TabIcon}
+            iconType='Settings'
+          >
+            <Scene
+              key='Settings'
+              renderTitle={() => <ScreenTitle t='titles.settings' />}
+              component={connect(mapStateToProps)(SettingsScreen)}
+            />
+          </Stack>
+        </Tabs>
       </Router>
     )
   }

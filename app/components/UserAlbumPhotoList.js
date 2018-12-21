@@ -11,9 +11,11 @@ class UserAlbumPhotoList extends Component {
   }
 
   renderItem = ({ photo }) => {
-    return <TouchableOpacity onPress={() => this.setState({ selectedPhotoUrl: photo.url })}>
-      <Image source={{ url: photo.thumbnailUrl }} style={{ width: width / 3, height: width / 3 }} />
-    </TouchableOpacity>
+    return (
+      <TouchableOpacity onPress={() => this.setState({ selectedPhotoUrl: photo.url })}>
+        <Image source={{ url: photo.thumbnailUrl }} style={{ width: width / 3, height: width / 3 }} />
+      </TouchableOpacity>
+    )
   }
 
   closeModal = () => {

@@ -6,7 +6,7 @@ import { Colors } from '@design'
 class List extends Component {
   renderTitle = () => {
     return <View>
-      <Text style={{ marginTop: 20, marginHorizontal: 20, color: '#000' }}>{this.props.title.toUpperCase()}</Text>
+      <Text style={{ marginTop: 20, marginHorizontal: 20, color: Colors.black, fontWeight: 'bold' }}>{this.props.title.toUpperCase()}</Text>
     </View>
   }
 

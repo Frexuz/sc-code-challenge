@@ -1,11 +1,68 @@
 {
-  "common": {
-    "loading": "Loading...",
-  },
   "tabs": {
-    "home": "Home",
+    "users": "用戶",
+    "settings": "設置",
   },
   "titles": {
-    "home": "Home",
-  }
+    "users": "用戶",
+    "userProfile": "用戶資料",
+    "userPosts": "用戶帖子",
+    "postComments": "評論",
+    "userTodos": "一切的",
+    "userAlbums": "相冊",
+    "userAlbum": "相片",
+    "settings": "設置",
+  },
+  "components": {
+    "userPost": {
+      "viewComments": "查看評論",
+    },
+    "userPostList": {
+      "postsBy": "帖子由 {{username}}",
+    },
+    "userTodoList": {
+      "incompleted": {
+        "title": "要完成的項目",
+        "emptyText": "沒有項目要完成",
+      },
+      "completed": {
+        "title": "已完成的項目",
+        "emptyText": "沒有完成的項目",
+      },
+    },
+    "postComment": {
+      "commentBy": "評論 {{email}}",
+    },
+  },
+  "emptyStates": {
+    "users": {
+      "text": "沒有找到用戶.",
+    },
+    "userPosts": {
+      "text": "未找到該用戶的帖子.",
+    },
+    "postComments": {
+      "text": "沒有找到這篇文章的評論.",
+    },
+    "userTodos": {
+      "text": "找不到此用戶的待辦事項.",
+    },
+    "userAlbums": {
+      "text": "未找到此用戶的相冊.",
+    },
+    "userAlbum": {
+      "text": "這張專輯中沒有找到照片.",
+    },
+  },
+  "screens": {
+    "settings": {
+      "selectLanguage": "選擇語言"
+    },
+    "userProfile": {
+      "revealAddress": "顯示地址",
+      "viewPosts": "查看帖子",
+      "viewTodos": "查看所有的",
+      "viewAlbums": "查看相冊",
+    },
+  },
 }

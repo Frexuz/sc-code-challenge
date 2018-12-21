@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 40,
-    backgroundColor: '#fff',
+    backgroundColor: Colors.white,
   },
   content: {
     flex: 1,
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   iconWrapper: {
-    backgroundColor: '#fff',
+    backgroundColor: Colors.white,
     borderRadius: 100,
     height: 175,
     width: 175,
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   text: {
     marginTop: 40,
     fontSize: 20,
-    color: '#000',
+    color: Colors.black,
   },
 })
 

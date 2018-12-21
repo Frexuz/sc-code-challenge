@@ -5,7 +5,7 @@ import { Card, Title, Content, Avatar, Link, List, ListItem } from '@components'
 import { Navigate } from '@screens'
 import { scopedI18n } from '@utils'
 
-const t = scopedI18n('screens.home')
+const t = scopedI18n('screens.userProfile')
 
 class UserProfileScreen extends Component {
   state = {
@@ -38,7 +38,7 @@ class UserProfileScreen extends Component {
             <List containerStyle={{ margin: 0 }}>
               {!addressRevealed && (
                 <ListItem icon='map-marker'>
-                  <Link text='Reveal address' onPress={this.revealAddress} />
+                  <Link text={t('.revealAddress')} onPress={this.revealAddress} />
                 </ListItem>
               )}
               {addressRevealed && <ListItem icon='map-marker' borderless text={this.fullAddress()} />}
@@ -49,9 +49,9 @@ class UserProfileScreen extends Component {
             </List>
           </Card>
           <List containerStyle={{ marginTop: 20 }}>
-            <ListItem textStyle={{ fontWeight: 'bold' }} icon='text-subject' text='View posts' onPress={() => Navigate.to('UserPosts', { user: user })} />
-            <ListItem textStyle={{ fontWeight: 'bold' }} icon='checkbox-marked-outline' text='View todo&apos;s' onPress={() => Navigate.to('UserTodos', { user: user })} />
-            <ListItem textStyle={{ fontWeight: 'bold' }} icon='image-filter' text='View albums' onPress={() => Navigate.to('UserAlbums', { user: user })} />
+            <ListItem textStyle={{ fontWeight: 'bold' }} icon='text-subject' text={t('.viewPosts')} onPress={() => Navigate.to('UserPosts', { user: user })} />
+            <ListItem textStyle={{ fontWeight: 'bold' }} icon='checkbox-marked-outline' text={t('.viewTodos')} onPress={() => Navigate.to('UserTodos', { user: user })} />
+            <ListItem textStyle={{ fontWeight: 'bold' }} icon='image-filter' text={t('.viewAlbums')} onPress={() => Navigate.to('UserAlbums', { user: user })} />
           </List>
         </Content>
       </ScrollView>

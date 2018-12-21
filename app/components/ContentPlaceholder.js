@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import { View } from 'react-native'
-import { Colors } from '@design'
 import Placeholder from 'rn-placeholder'
+
+import { Colors } from '@design'
 
 const lineWidths = ['30%', '60%', '40%']
 
 export default class ContentPlaceholder extends Component {
   renderPlaceholderItem = (item, index) => {
     const Component = this.component
+
     return <View key={`placeholder-${index}`} style={{ marginBottom: 20 }}>
       <Component
         size={100}

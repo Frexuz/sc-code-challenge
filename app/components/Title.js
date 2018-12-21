@@ -1,9 +1,11 @@
 import styled from 'styled-components/native'
 import React, { Component } from 'react'
+
 import I18n from '@I18n'
+import { Colors } from '@design'
 
 const TitleText = styled.Text`
-  color: ${props => props.white ? '#fff' : '#000'};
+  color: ${props => props.white ? Colors.white : Colors.black};
   font-size: ${props => props.huge ? 32 : 24}px;
 `
 
@@ -12,6 +14,7 @@ class Title extends Component {
 
   render () {
     const { center, textStyle, white, huge, ...others } = this.props
+
     return (
       <TitleText
         style={[textStyle, center ? { textAlign: 'center' } : {}]}
