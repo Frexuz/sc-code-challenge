@@ -10,27 +10,27 @@ const t = scopedI18n('emptyStates')
 
 const emptyStates = {
   users: {
-    icon: 'close-circle-outline',
+    icon: 'close',
     text: '.users.text',
   },
   userPosts: {
-    icon: 'close-circle-outline',
+    icon: 'close',
     text: '.userPosts.text',
   },
   postComments: {
-    icon: 'close-circle-outline',
+    icon: 'close',
     text: '.postComments.text'
   },
   userTodos: {
-    icon: 'close-circle-outline',
+    icon: 'close',
     text: '.userTodos.text'
   },
   userAlbums: {
-    icon: 'close-circle-outline',
+    icon: 'close',
     text: '.userAlbums.text'
   },
   userAlbum: {
-    icon: 'close-circle-outline',
+    icon: 'close',
     text: '.userAlbum.text'
   },
 }
@@ -43,7 +43,7 @@ class EmptyState extends Component {
       <View style={styles.container}>
         <View style={styles.content}>
           <View style={styles.iconWrapper}>
-            <Icon name={icon} size={80} color={Colors.grey.lighter} />
+            <Icon name={icon} size={100} color={Colors.grey.lighter} />
           </View>
           <Text style={styles.text}>{t(text)}</Text>
         </View>
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   text: {
     marginTop: 40,
     fontSize: 20,
-    color: Colors.black,
+    color: Colors.text.base,
   },
 })
 
